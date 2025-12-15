@@ -1,0 +1,21 @@
+services:
+  hadoop-app:
+    build: .
+    container_name: hadoop-app
+    volumes:
+      - ./target:/app
+    environment:
+      - CORE_CONF_fs_defaultFS=hdfs://namenode:9000
+      - YARN_CONF_yarn_resourcemanager_hostname=resourcemanager
+    command: >
+      java -jar /app/hadoop-docker-test-1.0-SNAPSHOT.jar
+      hdfs://namenode:9000/user/category/input/test
+      hdfs://namenode:9000/user/category/result
+    stdin_open: true
+    tty: true
+    networks:
+      docker-hadoop_default: # <- change network here
+
+networks:
+  docker-hadoop_default:  # <- and here
+    external: true

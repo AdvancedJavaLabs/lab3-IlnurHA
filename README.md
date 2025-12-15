@@ -1,3 +1,33 @@
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/uyodabcP)
+
+# How to run
+
+1. Clone repository [docker-hadoop](https://github.com/big-data-europe/docker-hadoop):
+
+```bash
+git clone https://github.com/big-data-europe/docker-hadoop
+```
+
+2. In root dir of docker-hadoop start hadoop:
+
+```bash
+docker compose up -d
+```
+
+3. Get network name from docker inspect:
+
+```bash
+docker inspect namenode 
+```
+
+4. Put network name to [docker-compose](./java-code/my-project/docker-compose.yaml)
+
+5. (Optional) Change reducer number in [CategoryDriver](./java-code/my-project/src/main/java/com/yourcompany/CategoryDriver.java)
+
+6. Add huge tests to `huge_test` directory (in the same format as csv files in root dir)
+
+7. Start hadoop job using `bash start_test.sh`. Results will be in `hw_result.csv` and `huge_test_result.csv`
+
 ## Лабораторная работа: Реализация MapReduce для анализа данных о продажах с ипользованием HADOOP!!!
 # Цель работы
 
