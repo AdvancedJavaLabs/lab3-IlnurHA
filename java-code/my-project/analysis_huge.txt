@@ -1,0 +1,12 @@
+2.8Gib test: multiple files
+REDUCER_WORKERS=1
+TIME=147366 milliseconds
+====
+REDUCER_WORKERS=2
+TIME=141128 milliseconds
+====
+REDUCER_WORKERS=4
+TIME=139128 milliseconds
+====
+REDUCER_WORKERS=8
+TIME=136781 milliseconds
