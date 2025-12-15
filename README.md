@@ -24,7 +24,9 @@ docker inspect namenode
 
 5. (Optional) Change reducer number in [CategoryDriver](./java-code/my-project/src/main/java/com/yourcompany/CategoryDriver.java)
 
-6. 
+6. Add huge tests to `huge_test` directory (in the same format as csv files in root dir)
+
+7. Start hadoop job using `bash start_test.sh`. Results will be in `hw_result.csv` and `huge_test_result.csv`
 
 ## Лабораторная работа: Реализация MapReduce для анализа данных о продажах с ипользованием HADOOP!!!
 # Цель работы
